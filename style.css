@@ -1,0 +1,167 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Variables */
+:root {
+--body-bg-gradient-clr-1:black;
+--body-bg-gradient-clr-2:transparent;
+--body-bg-image: url(https://images.pexels.com/photos/2387532/pexels-photo-2387532.jpeg);
+
+--card-bg-clr: rgba(255,255,255,0.3);
+--card-rounded-border:1rem;
+
+--tech-icon-bg-clr:rgba(255,255,255,0.2);
+
+--elements-rounded-border:.25rem;
+
+--border-clr:rgba(255,255,255,0.4);
+--border-size:1px;
+
+--text-clr:rgba(255,255,255);
+--primary-clr:rgb(255,159,28);
+--secondary-clr:rgb(255,191,105);
+}
+
+/* CSS Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+/* Body Layout */
+body {
+ display: grid;
+ place-items: center;
+ height:100vh;
+ overflow:hidden;
+}
+
+/* Body Styles */
+body {
+ background-image: linear-gradient(to top, var(--body-bg-gradient-clr-1), var(--body-bg-gradient-clr-2)) ,var(--body-bg-image); 
+ background-size: cover;
+}
+
+/* Container Layout */
+.container{
+  position: relative;
+}
+
+/* Card Layout */
+.card {
+  padding: 2rem;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Card Styles */
+.card {
+  color: var(--text-clr);
+  background-color: var(--card-bg-clr);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  border-top: 1px solid var(--border-clr);
+  border-left: 1px solid var(--border-clr);
+}
+/* Card-header Layout */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Card-header-userinfo > p Layout */
+.card-header-userinfo > p {
+  margin-top: .2rem;
+}
+
+/* Card-header-userinfo > button Layout */
+.card-header-userinfo > button {
+  margin-top: .75rem;
+}
+
+/* Button Reset */
+.card-invite-btn {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+/* Card-invite-btn Styles */
+.card-invite-btn {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: bold;
+  padding: .5rem 1.25rem;
+  color: var(--text-clr);
+  background-color: var(--primary-clr);
+  border-top: 1px solid var(--border-clr);
+  border-left: 1px solid var(--border-clr);
+  border-radius: .25rem;
+}
+
+/* Card-img Styles */
+.card-img {
+  width: 8rem;
+  border-radius: 50%;
+}
+
+/* Card-body Layout */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* Card-paragraph Layout */
+.card-paragraph {
+  margin-bottom: .5rem;
+}
+
+/* Card-tech-container Layout */
+.card-tech-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.tech-icon {
+  padding: .5rem;
+  border-top: 1px solid var(--border-clr);
+  border-left: 1px solid var(--border-clr);
+  background-color: var(--tech-icon-bg-clr);
+  border-radius: var(--elements-rounded-border);
+}
+
+.card-invite-btn:hover, .tech-icon:hover {
+  cursor: pointer;
+}
+
+/* Circles Layout */
+.circles {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+}
+
+.circles {
+  background-color: var(--secondary-clr);
+  border-radius: 50%;
+}
+
+/* Circle-top Position */
+.circle-top {
+  top: -75px;
+  left: -75px;
+}
+
+/* Circle-bottom Position */
+.circle-bottom {
+  bottom: -100px;
+  right: -50px;
+}
+
